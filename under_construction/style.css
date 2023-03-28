@@ -1,0 +1,211 @@
+.ChatContainer {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: 5%;
+    padding-bottom: 3%;
+    transition: all 0.6s ease-in-out;
+}
+
+.ChatInterface {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    overflow: auto;
+    min-height: 200px;
+}
+
+.ChatInterface .message-left {
+    background-color: #f5c970;
+    border: 0px solid #ccc;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 8px;
+    clear: both;
+    float: left;
+    max-width: 50%;
+    min-height: 2rem;
+    font-size: 1.25rem;
+    min-width: 3rem;
+}
+
+.ChatInterface .message-right {
+    background-color: #dc91c2;
+    border: 0px solid #ccc;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 8px;
+    clear: both;
+    float: right;
+    max-width: 50%;
+    min-height: 2rem;
+    font-size: 1.25rem;
+    min-width: 3rem;
+}
+
+.InputContainer {
+    background-color: #dc91c2;
+    display: flex;
+    margin: auto;
+    border: 0px solid #ccc;
+    border-radius: 8px;
+    margin-top: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.25rem;
+    resize: none;
+    outline: none;
+}
+
+.MessageInput {
+    background-color: #dc91c2;
+    margin: auto;
+    border: 0px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.25rem;
+    resize: none;
+    outline: none;
+    height: 2rem;
+}
+
+.MessageInput:focus {
+    border-color: #2196f3;
+}
+
+.LoginInput {
+    width: 10rem;
+    display: inline-block;
+}
+
+.WordTag {
+    display: inline-block;
+    background-color: #dc91c2;
+    margin: 0 10px 0 10px;
+    padding: 0.6rem;
+    border: 0px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: none;
+    outline: none;
+}
+
+.btn-default {
+    background-color: #dc91c2;
+    border: 0px;
+    border-radius: 8px;
+    color: #333;
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-default:hover {
+    background-color: #c2699e;
+}
+
+.btn-default:focus {
+    outline: none;
+}
+
+.title-h1 {
+    display: inline-block;
+    font-size: 2em;
+    margin-top: 0.75rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #c2699e;
+}
+
+.main-title {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.under-construction {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.landing-container {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.heart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 40%; */
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23d191dc"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+    background-size: 100px;
+    animation: beat 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.25);
+    }
+}
+
+.chat-bubble {
+    position: fixed;
+    bottom: 15%;
+    right: 5%;
+    background-color: #f5c970;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1.25rem;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out 0.5s forwards;
+}
+
+.chat-delayed {
+    bottom: 8%;
+    animation: fadeInUp 2s ease-in-out 1.5s forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
